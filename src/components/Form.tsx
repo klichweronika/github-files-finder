@@ -4,6 +4,7 @@ import MenuItem from "@mui/material/MenuItem";
 import TextField from "@mui/material/TextField";
 import { SearchButton } from "./SearchButton";
 import { useState } from "react";
+import Button from "@mui/material/Button";
 
 export const Form = () => {
   const [currency, setCurrency] = useState("All");
@@ -14,19 +15,19 @@ export const Form = () => {
 
   const currencies = [
     {
-      value: "All",
+      value: "all",
       label: "All",
     },
     {
-      value: "Go",
+      value: "go",
       label: "Go",
     },
     {
-      value: "Java",
+      value: "java",
       label: "Java",
     },
     {
-      value: "JavaScript",
+      value: "javaScript",
       label: "JavaScript",
     },
   ];
@@ -45,7 +46,6 @@ export const Form = () => {
         <TextField required label="Text" variant="outlined"></TextField>
         <TextField required label="User" variant="outlined"></TextField>
         <TextField
-          id="outlined-select-currency"
           select
           label="Language"
           value={currency}
@@ -58,7 +58,9 @@ export const Form = () => {
           ))}
         </TextField>
 
-        <SearchButton value="something"></SearchButton>
+        <Box p={2} justifyContent="center" textAlign="center">
+          <Button variant="contained">Search</Button>
+        </Box>
       </Box>
     </>
   );

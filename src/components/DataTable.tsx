@@ -112,12 +112,12 @@ export default function DataTable() {
   return (
     <Box p={20}>
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 500 }} aria-label="custom pagination table">
+        <Table sx={{ minWidth: 500 }}>
           <TableHead>
             <TableRow>
               <TableCell>File</TableCell>
               <TableCell align="right">Repository</TableCell>
-              <TableCell align="right">Userr</TableCell>
+              <TableCell align="right">User</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
